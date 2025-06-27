@@ -1,5 +1,5 @@
 import { Webhook } from "svix";
-import User from "../modelsuser.js";
+import User from "../models/User.js";
 
 // API Controller Function to Manage Clerk User with database
 // POST /api/clerk

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const hotelSchema = new Schema(
+const hotelSchema = new mongoose.Schema(
     {
       name: { type: String, required: true },
       address: { type: String, required: true },
