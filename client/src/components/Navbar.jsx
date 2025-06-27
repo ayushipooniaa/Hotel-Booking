@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useClerk, useUser, UserButton } from "@clerk/clerk-react";
+import { useClerk, UserButton } from "@clerk/clerk-react";
 import logo from "../assets/finallogo.png";
 import { assets } from "../assets/assets";
+import { useAppContext } from "../conext/AppContext";
+import Dashboard from "../Pages/HotelOwner/DashBoard";
 
 const BookIcon = () => (
   <svg
@@ -33,10 +35,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { openSignIn } = useClerk();
-  const { user } = useUser();
-  const navigate = useNavigate();
   const location = useLocation();
-
+  const {user,navigate, isOwner,setshowHotelReg}=useAppContext()
   useEffect(() => {
 
 
@@ -91,13 +91,14 @@ const Navbar = () => {
             />
           </a>
         ))}
-        <button
-          className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${
-            isScrolled ? "text-black" : "text-white"
-          } transition-all`}
-        >
-          Dashboard
-        </button>
+        {
+                    user && (
+                        <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`} onClick={() => isOwner ? navigate('/owner') : setShowHotelReg(true)}>
+                            {isOwner ? 'Dashboard' : 'List Your Hotel'}
+                        </button>
+                    )
+                }
+        
       </div>
 
       {/* Desktop Right */}
@@ -163,8 +164,8 @@ const Navbar = () => {
           </a>
         ))}
 
-        <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all">
-          Dashboard
+        <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all" onClick={() => isOwner ? navigate('/owner') : setShowHotelReg(true)}>
+        {isOwner ? 'Dashboard' : 'List Your Hotel'}
         </button>
 
         {user ? (
