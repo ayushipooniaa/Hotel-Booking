@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 // Customer Pages
-import Home from './pages/Home';
+import Home from './Pages/Home';
 import AllRooms from './pages/AllRooms';
 import RoomDetails from './Pages/RoomDetail';
 import MyBookings from './Pages/MyBooking';
