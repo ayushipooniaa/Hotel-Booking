@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 // Customer Pages
 import Home from './Pages/Home';
 import AllRooms from './Pages/Allrooms';
-import RoomDetails from './Pages/RoomDetail';
-import MyBookings from './Pages/MyBooking';
+import RoomDetails from './Pages/RoomDetails';
+import MyBookings from './Pages/MyBookings';
 import Layout from './Pages/hotelOwner/Layout';
 import Dashboard from './Pages/hotelOwner/DashBoard';
 import ListRoom from './Pages/hotelOwner/ListRoom';
