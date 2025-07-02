@@ -7,12 +7,12 @@ import Footer from './components/Footer';
 
 // Customer Pages
 import Home from './Pages/Home';
-import AllRooms from './Pages/AllRooms';
+import AllRooms from './Pages/Allrooms';
 import RoomDetails from './Pages/RoomDetail';
 import MyBookings from './Pages/MyBooking';
-import Layout from './Pages/HotelOwner/Layout';
-import Dashboard from './Pages/HotelOwner/DashBoard';
-import ListRoom from './Pages/HotelOwner/ListRoom';
+import Layout from './Pages/hotelOwner/Layout';
+import Dashboard from './Pages/hotelOwner/DashBoard';
+import ListRoom from './Pages/hotelOwner/ListRoom';
 import AddRoom from './Pages/hotelOwner/AddRoom';
 import { useAppContext } from './conext/AppContext';
 
