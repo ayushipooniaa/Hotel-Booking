@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 // Customer Pages
 import Home from './Pages/Home';
-import AllRooms from './pages/AllRooms';
+import AllRooms from './Pages/AllRooms';
 import RoomDetails from './Pages/RoomDetail';
 import MyBookings from './Pages/MyBooking';
 import Layout from './Pages/HotelOwner/Layout';
