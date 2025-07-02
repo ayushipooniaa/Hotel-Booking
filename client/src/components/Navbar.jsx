@@ -4,7 +4,7 @@ import { useClerk, UserButton } from "@clerk/clerk-react";
 import logo from "../assets/finallogo.png";
 import { assets } from "../assets/assets";
 import { useAppContext } from "../conext/AppContext";
-import Dashboard from "../Pages/HotelOwner/DashBoard";
+import Dashboard from "../Pages/hotelOwner/DashBoard";
 
 const BookIcon = () => (
   <svg
